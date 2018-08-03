@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/header :: head" />
+
+<body class="page-brand">
+<header th:replace="fragments/bodybrand :: header"></header>
+	<main class="content">
+		<div class="content-heading">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+							<h1 class="heading">YAP (Yet Another PEP)</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		<div class="panel-group" style="margin-top: 40px">
+		<br/><br/>
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<span th:utext="${userName}"></span><br/>
+					
+				<!-- 	<span th:text="${advice}" th:unless="${#strings.equals(advice,'Optional.empty')}"></span><br/>
+					<span th:if="${advice == 'badCredentialsException'}">banana</span>
+					<span th:if="${advice == 'Optional.empty'}">chupacabara</span> -->
+                
+			<span>Your risk score is currently:</span><span class="text-danger" id="riskscore">0</span> <br/>
+			<span id="advice"></span>
+				</div>
+				<div class="panel-body" style="padding-top: 5px !important;">
+					<div class="row">
+						<div id="messages"></div>
+					</div>
+					<h4>By classification</h4>
+					<div class="row" style="padding-top: 4px; padding-bottom: 4px;">
+						<div class="col">
+							<button id="unclassified" type="button"
+								class="btn btn-outline-primary">Access Unclassified
+								Data</button>
+							<button id="secret" type="button" class="btn btn-outline-primary">Access
+								Secret Data</button>
+							<button id="topsecret" type="button"
+								class="btn btn-outline-primary">Access Top Secret Data</button>
+
+						</div>
+					</div>
+					<h4>By training</h4>
+					<div class="row" style="padding-top: 4px; padding-bottom: 4px;">
+						<div class="col">
+							<button id="pii" type="button" class="btn btn-outline-primary">Access
+								Data Requiring PII Training</button>
+							<button id="centos" type="button" class="btn btn-outline-primary">Access
+								Data Requiring CentOS Training</button>
+								<button id="admin" type="button" class="btn btn-outline-primary">Access
+								Data Requiring Administrator Training</button>
+						</div>
+
+					</div>
+					<!-- Begin by seniority -->
+					
+					<h4>By seniority</h4>
+					<div class="row" style="padding-top: 4px; padding-bottom: 4px;">
+						<div class="col">
+							<button id="midlevel" type="button"
+								class="btn btn-outline-primary">Access Data Requiring
+								Mid Level or Higher</button>
+						</div>
+
+					</div>
+					
+				    <!-- Begin by branch -->
+					
+					<h4>By branch</h4>
+					<div class="row" style="padding-top: 4px; padding-bottom: 4px;">
+						<div class="col">
+							<button id="hr" type="button"
+								class="btn btn-outline-primary">Access Data Requiring
+								HR Branch</button>
+								<button id="it" type="button"
+								class="btn btn-outline-primary">Access Data Requiring
+								IT Branch</button>
+									<button id="mission" type="button"
+								class="btn btn-outline-primary">Access Data Requiring
+								Mission Support Branch</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading"
+					style="background-color: #525252; color: #ffffff">Axiomatics
+					Policy Server Responses</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-12">
+							<table id="conversation" class="table table-striped table-dark">
+								<thead class="thead-dark">
+									<tr>
+										<th>Decisions</th>
+									</tr>
+								</thead>
+								<tbody id="risks">
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+		</div>
+
+	</main>
+<script src="/app.js"></script>
+	
+</body>
+</html>

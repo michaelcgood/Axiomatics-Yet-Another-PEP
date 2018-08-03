@@ -1,0 +1,87 @@
+
+.page-brand .content-heading, .page-brand .header-transparent:before{
+	background: #3B495B;	
+}
+
+.page-brand .content-sub-heading, .form-group-brand .floating-label{
+	color: #3B495B;
+}
+
+.btn-brand{
+	background-color: #3B495B;
+}
+
+.hidden{
+	display : none;
+}
+
+.Permit{
+	background : green;
+	color : rgb(200,255,200);
+}
+
+.Deny{
+	background : rgb(100,0,0);
+	color : rgb(255,200,200);
+}
+
+.NotApplicable{
+	background : rgb(255, 255, 204);
+	color : black;
+}
+
+.Indeterminate{
+	background : rgb(200, 200, 200);
+	color : black;
+}
+
+.icon-white{
+	color : white;
+}
+
+.icon-green{
+	color : #86BA90;
+}
+.icon-red{
+	color : #DF2935;
+}
+.icon-blue{
+	color : #AFD2E9;
+}
+.icon-orange{
+	color : #DFA06E;
+}
+
+.card-grey{
+	background-color : rgb(100,100,100);
+}
+
+#parents{
+	font-size: smaller;
+    padding: 3px;
+    display: block;
+    background: rgb(240,255,230);
+    text-align: center;
+    margin-top: 3px;
+    float: none;
+    clear: both;
+    margin-bottom: 3px;
+}
+
+td.attributeDescription:empty{
+	background : rgb(255,234,193);
+}
+
+td.keyColumn{
+	font-size : 75%;
+}
+
+table#attributeList tr td code {
+    float: left;
+    margin: 2px;
+    margin-left: 0px;
+}
+
+table#attributeList tr td{
+    word-wrap:break-word;
+}
