@@ -16,17 +16,12 @@
 				</div>
 			</div>
 
-
 		<div class="panel-group" style="margin-top: 40px">
 		<br/><br/>
 			<div class="panel panel-primary">
 				<div class="panel-heading">
 					<span th:utext="${userName}"></span><br/>
-					
-				<!-- 	<span th:text="${advice}" th:unless="${#strings.equals(advice,'Optional.empty')}"></span><br/>
-					<span th:if="${advice == 'badCredentialsException'}">banana</span>
-					<span th:if="${advice == 'Optional.empty'}">chupacabara</span> -->
-                
+					            
 			<span>Your risk score is currently:</span><span class="text-danger" id="riskscore">0</span> <br/>
 			<span id="advice"></span>
 				</div>
